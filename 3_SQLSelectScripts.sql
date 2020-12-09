@@ -1,0 +1,42 @@
+-- Select all table data
+SELECT * FROM author
+SELECT * FROM book
+
+-- Select last name from all authors with books 
+SELECT distinct a.last_name as 'Author Last Name with books'
+FROM author a
+INNER JOIN book_has_author b ON a.author_id = b.author_author_id;
+
+-- Select book (title and year) and authors (first and last name) ordered by title
+SELECT b.title, b.year, a.first_name, a.last_name
+FROM ((author a
+INNER JOIN book_has_author ba ON a.author_id = ba.author_author_id)
+INNER JOIN book b ON b.book_id = ba.book_book_id)
+ORDER BY b.title;
+
+-- Select book (title and year) and authors (first and last name) ordered by title
+-- where the author's first name is equal 'Lisa'
+SELECT b.title, b.year, a.first_name, a.last_name
+FROM ((author a
+INNER JOIN book_has_author ba ON a.author_id = ba.author_author_id)
+INNER JOIN book b ON b.book_id = ba.book_book_id)
+WHERE a.first_name = 'Lisa'
+ORDER BY b.title;
+
+-- Select book (title and year) and authors (first and last name) ordered by title
+-- where the author's first name is equal 'Lisa'
+SELECT b.title, b.year, a.first_name, a.last_name
+FROM ((author a
+INNER JOIN book_has_author ba ON a.author_id = ba.author_author_id)
+INNER JOIN book b ON b.book_id = ba.book_book_id)
+WHERE a.first_name = 'Lisa'
+ORDER BY b.title;
+
+-- Select book (title and year) and authors (first and last name) ordered by title
+-- where the author's last name starts with 'Greg'
+SELECT b.title, b.year, a.first_name, a.last_name
+FROM ((author a
+INNER JOIN book_has_author ba ON a.author_id = ba.author_author_id)
+INNER JOIN book b ON b.book_id = ba.book_book_id)
+WHERE a.last_name LIKE 'Greg%'
+ORDER BY b.title;
