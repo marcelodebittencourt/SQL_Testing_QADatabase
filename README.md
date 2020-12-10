@@ -31,3 +31,11 @@ Open and run the following scripts on MySQL Workbench SQL editor:
 ## SQL commands
 
 All SQL commands are available in the "3_SQLSelectScripts.sql" file.
+
+## Specific languages
+
+* DDL (Data Definition Language) - database object interaction: CREATE, ALTER e DROP
+* DML (Data Manipulation Language) - data inside tables interaction: INSERT, DELETE e UPDATE
+* DQL (Data Query Language): SELECT
+* DTL (Data Transaction Language) - transaction controlling: BEGIN TRANSACTION, COMMIT E ROLLBACK
+* DCL (Data Control Language) - database security controlling: GRANT, REVOKE E DENY.
