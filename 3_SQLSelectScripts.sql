@@ -40,3 +40,14 @@ INNER JOIN book_has_author ba ON a.author_id = ba.author_author_id)
 INNER JOIN book b ON b.book_id = ba.book_book_id)
 WHERE a.last_name LIKE 'Greg%'
 ORDER BY b.title;
+
+-- Count the number of books 
+SELECT COUNT(*) as 'number of books'
+FROM book
+
+-- Count the number of books written by each author_author_id
+SELECT a.first_name, a.last_name, count(*)
+FROM ((author a
+INNER JOIN book_has_author ba ON a.author_id = ba.author_author_id)
+INNER JOIN book b ON b.book_id = ba.book_book_id)
+GROUP BY a.first_name, a.last_name;
