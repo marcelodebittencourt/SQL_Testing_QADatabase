@@ -51,3 +51,13 @@ FROM ((author a
 INNER JOIN book_has_author ba ON a.author_id = ba.author_author_id)
 INNER JOIN book b ON b.book_id = ba.book_book_id)
 GROUP BY a.first_name, a.last_name;
+
+-- Count the number of authors from each book
+SELECT b.title, count(*)
+FROM ((author a
+INNER JOIN book_has_author ba ON a.author_id = ba.author_author_id)
+INNER JOIN book b ON b.book_id = ba.book_book_id)
+GROUP BY b.title;
+
+-- Select books written after 2010
+SELECT b.title, b.year FROM book b WHERE b.year > 2010
