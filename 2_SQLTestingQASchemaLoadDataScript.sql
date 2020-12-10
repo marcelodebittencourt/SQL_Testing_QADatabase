@@ -4,6 +4,7 @@ INSERT INTO `SQLTestingQA`.`author` (`author_id`, `first_name`, `last_name`) VAL
 INSERT INTO `SQLTestingQA`.`author` (`author_id`, `first_name`, `last_name`) VALUES (3, 'Kent', 'Beck');
 INSERT INTO `SQLTestingQA`.`author` (`author_id`, `first_name`, `last_name`) VALUES (4, 'Robert', 'Martin');
 INSERT INTO `SQLTestingQA`.`author` (`author_id`, `first_name`, `last_name`) VALUES (5, 'Glenford', 'Myers');
+INSERT INTO `SQLTestingQA`.`author` (`author_id`, `first_name`, `last_name`) VALUES (6, 'Paul', 'Amman');
 
 -- Table `sqltestingqa`.`book`
 INSERT INTO `sqltestingqa`.`book` (`book_id`, `title`, `year`) VALUES (1, 'The Art of Software Testing', 2011);

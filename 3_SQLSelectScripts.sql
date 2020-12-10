@@ -61,3 +61,11 @@ GROUP BY b.title;
 
 -- Select books written after 2010
 SELECT b.title, b.year FROM book b WHERE b.year > 2010
+
+-- Select author number that does not have book
+-- using NOT IN
+SELECT a.author_id, a.first_name, a.last_name
+FROM author a
+WHERE a.author_id NOT IN
+(SELECT ba.author_author_id
+FROM book_has_author ba)
