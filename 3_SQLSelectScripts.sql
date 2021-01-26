@@ -80,3 +80,21 @@ INNER JOIN book_has_author ba ON a.author_id = ba.author_author_id)
 INNER JOIN book b ON b.book_id = ba.book_book_id)
 GROUP BY a.first_name, a.last_name
 HAVING count(*) >= 2
+
+-- Count the number of books written by each author_author_id
+-- having # of book between 1 and 2
+SELECT a.first_name, a.last_name, count(*) as "# books"
+FROM ((author a
+INNER JOIN book_has_author ba ON a.author_id = ba.author_author_id)
+INNER JOIN book b ON b.book_id = ba.book_book_id)
+GROUP BY a.first_name, a.last_name
+HAVING count(*) BETWEEN 1 and 2
+
+-- Count the number of books written by each author_author_id
+-- having # of book 1 or 3
+SELECT a.first_name, a.last_name, count(*) as "# books"
+FROM ((author a
+INNER JOIN book_has_author ba ON a.author_id = ba.author_author_id)
+INNER JOIN book b ON b.book_id = ba.book_book_id)
+GROUP BY a.first_name, a.last_name
+HAVING count(*) IN (1, 3)
