@@ -71,3 +71,12 @@ FROM author a
 WHERE a.author_id NOT IN
 (SELECT ba.author_author_id
 FROM book_has_author ba)
+
+-- Count the number of books written by each author_author_id
+-- having # of book equal or greater than 2
+SELECT a.first_name, a.last_name, count(*) as "# books"
+FROM ((author a
+INNER JOIN book_has_author ba ON a.author_id = ba.author_author_id)
+INNER JOIN book b ON b.book_id = ba.book_book_id)
+GROUP BY a.first_name, a.last_name
+HAVING count(*) >= 2
