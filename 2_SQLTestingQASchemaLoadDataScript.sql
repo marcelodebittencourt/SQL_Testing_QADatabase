@@ -12,7 +12,7 @@ INSERT INTO `sqltestingqa`.`book` (`book_id`, `title`, `year`) VALUES (2, 'Agile
 INSERT INTO `sqltestingqa`.`book` (`book_id`, `title`, `year`) VALUES (3, 'More Agile Testing: Learning Journeys for the Whole Team', 2014);
 INSERT INTO `sqltestingqa`.`book` (`book_id`, `title`, `year`) VALUES (4, 'Test Driven Development: By Example', 2002);
 INSERT INTO `sqltestingqa`.`book` (`book_id`, `title`, `year`) VALUES (5, 'Clean Code: A Handbook of Agile Software Craftsmanship', 2008);
-
+INSERT INTO `sqltestingqa`.`book` (`book_id`, `title`, `year`) VALUES (6, 'Testing Extreme Programming', 2003);
 -- Table `sqltestingqa`.`book_has_author`
 INSERT INTO `sqltestingqa`.`book_has_author` (`book_book_id`, `author_author_id`) VALUES (1, 5);
 INSERT INTO `sqltestingqa`.`book_has_author` (`book_book_id`, `author_author_id`) VALUES (2, 1);
@@ -21,3 +21,4 @@ INSERT INTO `sqltestingqa`.`book_has_author` (`book_book_id`, `author_author_id`
 INSERT INTO `sqltestingqa`.`book_has_author` (`book_book_id`, `author_author_id`) VALUES (3, 2);
 INSERT INTO `sqltestingqa`.`book_has_author` (`book_book_id`, `author_author_id`) VALUES (4, 3);
 INSERT INTO `sqltestingqa`.`book_has_author` (`book_book_id`, `author_author_id`) VALUES (5, 4);
+INSERT INTO `sqltestingqa`.`book_has_author` (`book_book_id`, `author_author_id`) VALUES (6, 1);
