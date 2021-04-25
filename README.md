@@ -20,6 +20,16 @@ This repository was created for educational purposes. You will be able to create
 * MySQL Community Server >= 8.0.22
 * MySQL Workbench >= 8.0.22 (explicitly verify that it is checked to be installed in the MySQL Community Server installation options).
 
+### How to run MySQL Community Server via Docker
+
+This command will create the MySQL image and a container with MySQL running at 3366 TCP port. The password is defined inside the docker-compose.yml file. You can change the password in the script before run the command.
+
+1. Docker needs to be running
+
+2. Run the command:
+
+docker-compose up
+
 ## Preparing the repository
 
 Open and run the following scripts on MySQL Workbench SQL editor:
